@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="2dp"
+    android:elevation="4dp"
+    android:minWidth="100dp"
+    android:maxWidth="200dp"
+    card_view:cardCornerRadius="13dp"
+    card_view:cardPreventCornerOverlap="true"
+    card_view:cardBackgroundColor="@color/marker_view_white"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="3dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/terumo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8th May, 2010"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_marker_date_size"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_time"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center|bottom"
+            android:background="@drawable/marker_bottom_round_corner_orange"
+            >
+
+            <TextView
+                android:id="@+id/text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="110"
+                android:textSize="@dimen/font_marker_value_size"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:id="@+id/text_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/display.unit.mg_per_dl"
+                android:gravity="bottom"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_marker_unit_size"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/medication_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/medication_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="8th May, 2010"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_marker_date_size"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medication_time"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center|bottom"
+            android:background="@drawable/marker_bottom_round_corner_green"
+            >
+
+            <LinearLayout
+                android:id="@+id/dosage_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/medication_dosage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="110"
+                    android:textSize="@dimen/font_marker_value_size"
+                    android:textColor="@android:color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/medication_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/display.unit.mg_per_dl"
+                    android:gravity="bottom"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_marker_unit_size"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/medication_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dosage_layout"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_marker_value_size"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/photo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/photo_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="8th May, 2010"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_marker_date_size"
+            />
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/photo_time"
+            android:adjustViewBounds="true"
+            android:padding="8dp"
+            android:background="@drawable/round_rect_btm_blue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bp_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bp_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="8th May, 2010"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_marker_date_size"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bp_time"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center|bottom"
+            android:background="@drawable/marker_bottom_round_corner_red"
+            >
+
+            <TextView
+                android:id="@+id/bp_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="110"
+                android:textSize="@dimen/font_marker_value_size"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:id="@+id/bp_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/display.unit.mg_per_dl"
+                android:gravity="bottom"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_marker_unit_size"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/weight_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/weight_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="8th May, 2010"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_marker_date_size"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weight_time"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center|bottom"
+            android:background="@drawable/marker_bottom_round_corner_blue"
+            >
+
+            <TextView
+                android:id="@+id/weight_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="110"
+                android:textSize="@dimen/font_marker_value_size"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:id="@+id/weight_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/display.unit.mg_per_dl"
+                android:gravity="bottom"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_marker_unit_size"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

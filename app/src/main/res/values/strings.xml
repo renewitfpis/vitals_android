@@ -1,0 +1,287 @@
+<resources>
+    <string name="app_name">Vitals</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="navigation_dashboard">Dashboard</string>
+    <string name="navigation_overview">Overview</string>
+    <string name="navigation_activity">Activity</string>
+    <string name="navigation_timeline">Activity</string>
+    <string name="navigation_reminder">Reminder</string>
+    <string name="navigation_chart"   >Chart</string>
+    <string name="navigation_measure" >Measure</string>
+    <string name="navigation_setting" >Setting</string>
+    <string name="navigation_privacy" >Privacy</string>
+    <string name="navigation_logout"  >Logout</string>
+
+    <string name="title_overview">Overview</string>
+    <string name="title_timeline">Activity</string>
+    <string name="title_photo">Photo</string>
+    <string name="title_signs_and_symptoms">Signs And Symptoms</string>
+    <string name="title_update_profile">Update Profile</string>
+    <string name="title_privacy">Privacy</string>
+    <string name="title_reminder">Reminder</string>
+
+    <string name="remark">Remark</string>
+    <string name="name">Name</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="height">Height (CM)</string>
+    <string name="weight">Weight (KG)</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="today">Today</string>
+
+    <string name="sign_and_symptom_remark">Select the sign and symptoms you are having now.</string>
+
+    <string name="squarecamera__request_write_storage_permission_text">
+        Approval is needed to save your photo on your device
+    </string>
+    <string name="main_title">Update Profile</string>
+    <string name="symptom_title">Sign and Symptoms</string>
+    <string name="ade_title">Automatic Data Entry</string>
+    <string name="measured_title">Measured</string>
+    <string name="blood_glucose">Blood Glucose</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="spo2">SpO2</string>
+    <string name="device.info.no_pair_device">No Paired Device</string>
+    <string name="device.info.retrieve_data">Retrieving Data</string>
+    <string name="glucose.title.pair_device">Turn On Medisafe Fit</string>
+    <string name="glucose.info.pair_device_step1">To start pairing, turn on Medisafe Fit Glucometer by pressing the green button.</string>
+    <string name="glucose.info.pair_device_step2">Tap your glucometer to the bottom of your phone until a beep sound is heard.</string>
+    <string name="glucose.info.tap_device">Tap your device to your phone</string>
+    <string name="glucose.info.pair_device">Glucometer not paired. Press to pair device</string>
+    <string name="weight.info.pair_device">Weigh scale not paired. Press to pair device</string>
+    <string name="thermo.info.pair_device">Thermometer not paired. Press to pair device</string>
+    <string name="pairing.bluetooth.success">Pairing Success</string>
+    <string name="pairing.bluetooth.fail">Pairing Failed</string>
+    <string name="pairing.bluetooth.enter_pairing">Enter Pairing Mode</string>
+    <string name="pairing.bluetooth.enter_reading">Retrieving Data</string>
+    <string name="pairing.bluetooth.not_connected">Bluetooth is not turned on.\nPress to connect</string>
+    <string name="pairing.timeout">Connection timed out</string>
+    <string name="pairing.reading_success">Data Retrieved</string>
+    <string name="pairing.reading_fail">Failed to Retrieve Data</string>
+    <string name="pairing.reading_fail_no_device">No Device</string>
+    <string name="pairing.reading_fail_error">Connection Error</string>
+    <string name="pairing.nfc.not_connected">NFC is not turned on.\nPress to connect</string>
+    <string name="pairing.nfc.ble.not_connected">NFC and BLE are not turned on.</string>
+    <string name="pairing.nfc.enter_pairing_mode">Enter Pairing Mode</string>
+    <string name="pairing.nfc.enter_reading_mode">Retrieving Data</string>
+    <string name="blood_pressure.info.press_button">Press the front button of Blood Pressure Meter to start taking reading.</string>
+    <string name="blood_pressure.info.pair_device">Blood Pressure meter not paired. Press to pair device</string>
+    <string name="blood_pressure.info.pair_device_step">Long press the Start Button until PR is shown.</string>
+    <string name="nonin_oximeter.info.pair_device_step">Turn on your oximeter device by inserting middle finger into the device to start pairing.</string>
+    <string name="berry_oximeter.info.pair_device_step">Turn on your oximeter device to start pairing.</string>
+    <string name="zencro_x6.info.pair_device_step">Press on the triangular button on your pedometer to start pairing.</string>
+    <string name="accu_chek.info.pair_device_step">Turn on the device by pressing OK Button. Select Settings > Wireless > Pairing > Pair Device to activate pairing mode.</string>
+
+    <string name="weight.info.pair_device_step">Long press the set button at the back of your scale until PR is shown.</string>
+    <string name="weight.info.press_button">Step on the weighscale to start taking reading.</string>
+
+    <string name="thermo.info.take_reading">Place the sensor tip in preferred measurement site such as oral or underarm to start taking reading.</string>
+    <string name="thermo.info.pair_device_step">Press the button on top of your thermometer once to turn it on. When L is displayed, press once again until PR is shown on screen.</string>
+
+    <string name="weight.info.weight">Weight</string>
+    <string name="temperature.info.temperature">Temperature</string>
+
+    <string name="manual_title">Manual Entry</string>
+    <string name="sugar_con_subtitle">Sugar Concentration</string>
+
+    <string name="no_value_date">DD MM YYYY</string>
+    <string name="no_value_time">HH:MM</string>
+
+    <string name="dialog.ok">OK</string>
+    <string name="dialog.cancel">Cancel</string>
+
+    <string name="title_activity_forgot_pass">Forgot Password</string>
+    <string name="title_activity_signup">Sign Up</string>
+    <string name="title_activity_reminder">Reminder</string>
+    <string name="title_activity_add_reminder">Add Reminder</string>
+    <string name="title_activity_edit_reminder">Edit Reminder</string>
+    <string name="title_activity_chart">Chart</string>
+    <string name="title_activity_glucose_reading">Blood Glucose Reading</string>
+    <string name="title_activity_blood_pressure_reading">Blood Pressure Reading</string>
+    <string name="title_activity_weight_reading">Weight Reading</string>
+    <string name="title_activity_temperature_reading">Temperature Reading</string>
+    <string name="title_activity_spo2_reading">SpO2 Reading</string>
+    <string name="title_activity_medication_taken">Medication Taken</string>
+    <string name="title_activity_measure">Take a Measurement</string>
+    <string name="title_activity_measurement_reading">Measurement Reading</string>
+    <string name="title_activity_camera">Take Photo of Food</string>
+    <string name="title_activity_camera_edit">Food Taken</string>
+    <string name="title_activity_sign_and_symptoms">How do you feel?</string>
+
+
+    <string name="login.email">Email</string>
+    <string name="login.password">Password</string>
+    <string name="login.confirm_password">Confirm Password</string>
+    <string name="login.login">Login</string>
+    <string name="login.sign_up">Sign Up</string>
+    <string name="login.forgot_password">Forgot Password?</string>
+    <string name="login.fail">Login Failed</string>
+    <string name="login.fail_msg">Please try again!</string>
+    <string name="login.connect_to_server_fail_msg">Failed to connect to server! Please try again!</string>
+    <string name="login.success">Login Success</string>
+    <string name="logout.title">Log Out</string>
+    <string name="logout.confirmation">Are you sure you want to log out?</string>
+    <string name="logout.success_title">Log out Successful</string>
+    <string name="logout.fail_title">Log out Failed</string>
+    <string name="logout.success_message">You\'ll be redirected to login page.</string>
+    <string name="logout.fail_message">Please check if your internet is turned on.</string>
+    <string name="forgot_pass.fail">Sending failed</string>
+    <string name="forgot_pass.fail_message">Please try again!</string>
+    <string name="forgot_pass.success">Recovery Email Sent</string>
+    <string name="forgot_pass.success_message">Please check your inbox for instruction to reset your password.</string>
+    <string name="signup.agree_to_terms">I agree with the terms and conditions.</string>
+    <string name="signup.first_name">First Name</string>
+    <string name="signup.last_name">Last Name</string>
+
+    <string name="error.title.no_internet">No Internet Connection</string>
+    <string name="error.msg.no_internet">Please check if your internet is turned on.</string>
+    <string name="error.title.incomplete_form">Incomplete Form</string>
+    <string name="error.msg.incomplete_form">Please fill in all necessary fields.</string>
+    <string name="error.title.no_selection">No Symptom Selected</string>
+    <string name="error.msg.no_selection">Please select at least one symptom.</string>
+    <string name="error.msg.overly_high_glucose">"Your glucose level seems to be too high for this unit. Perhaps you mean mg/dL?"</string>
+    <string name="success.title.detected_data">Successful Data Importation</string>
+    <string name="success.msg.detected_data">Blood glucose: %1$d , %2$s</string>
+    <string name="confirm.title.confirm_deletion">Are you sure you want to delete this %1$s?</string>
+    <string name="confirm.msg.confirm_deletion">Once confirmed, changes cannot be reverted.</string>
+    <string name="display.unit.mmol_per_l">mmol/L</string>
+    <string name="display.unit.mg_per_dl">mg/dL</string>
+    <string name="display.unit.tablet">tablet</string>
+    <string name="display.unit.unit">unit</string>
+    <string name="display.unit.ml">ml</string>
+    <string name="display.unit.pulse_rate">bpm</string>
+    <string name="display.unit.blood_pressure.si">mm Hg</string>
+    <string name="display.unit.blood_pressure.imperial">kPa</string>
+    <string name="display.unit.weight.si">kg</string>
+    <string name="display.unit.weight.imperial">lb</string>
+    <string name="display.unit.temperature.celsius">°C</string>
+    <string name="display.unit.temperature.fahrenheit">°F</string>
+    <string name="display.info.before_meal">Before Meal</string>
+    <string name="display.info.after_meal">After Meal</string>
+    <string name="display.unit.medication_title">Unit</string>
+
+    <string name="info.msg.empty_reminder_list">You do not have any reminder yet</string>
+    <string name="info.msg.forgot_pass">Please fill in the email you\'ve used for Vitals App Registration. An email will be sent shortly.</string>
+    <string name="info.msg.empty_medical_device_list">You are not connected to any medical device yet</string>
+
+    <!-- Medical device brands-->
+    <string name="and_medical">A&amp;D Medical</string>
+    <string name="foracare">ForaCare</string>
+    <string name="terumo_medical_corparation">Terumo Medical Corporation</string>
+    <string name="taidoc">TaiDoc</string>
+    <string name="berry">Berry</string>
+    <string name="nonin">Nonin</string>
+
+    <!-- Terumo models -->
+    <string name="terumo_medisafe_fit">Medisafe FIT</string>
+    <string name="terumo_medisafe_fit_description">The Medisafe FIT blood glucose meter is a high quality medical device, which combines reliability and ease of use. </string>
+
+    <!-- A&D medical models -->
+    <string name="aandd_deluxe_connected_weight_scale">Precision Health Scale</string>
+    <string name="aandd_deluxe_connected_blood_pressure_meter">Upper Arm Blood Pressure Monitor</string>
+    <string name="aandd_digital_thermometer">Digital Thermometer</string>
+    <string name="aandd_instant_read_ear_thermometer">Instant Read Ear Thermometer</string>
+    <string name="aandd_deluxe_connected_weight_scale_description">Precision Health Scale provides ultra precise weighing results in the comfort of your own home. You can find out tiny changes in your bodyweight with precision health scale hi-resolution series.</string>
+    <string name="aandd_deluxe_connected_blood_pressure_meter_description">Introducing the Upper Arm Blood Pressure Monitor, one of the most advanced monitors available designed for ease of use and accuracy with a simple, compact and modern design..</string>
+    <string name="aandd_digital_thermometer_description">Under Arm Thermometer is a temperature meter data management, built-in Bluetooth Smart Smartphone vital signs. Easily and accurately record temperature.</string>
+    <string name="aandd_instant_read_ear_thermometer_description">Instant Read Ear Thermometer</string>
+
+    <!-- ForaCare models -->
+    <string name="foracare_blood_glucose_pressure_monitoring_system">Blood Glucose Plus Blood Pressure Monitoring System</string>
+
+    <!-- TaiDoc models -->
+    <string name="taidoc_ear_thermometer">TD1261 Ear Infrared Thermometer</string>
+
+    <!-- Berry models -->
+    <string name="berry_oximeter">Bluetooth General Finger Pulse Oximeter</string>
+    <string name="berry_oximeter_description">Simple and convenient usage of product, simple one touch operation. Small volume, light weight, convenient to carry. Lower consumption, original two AAA batteries will allow device to continuously work for 24 hours.</string>
+
+    <!-- Nonin models -->
+    <string name="nonin_oximeter">Bluetooth® Smart Pulse Oximeter</string>
+    <string name="nonin_oximeter_description">Features algorithms specifically for patients with challenging conditions such as low perfusion, dark skin tones and motion. Quickly provides clinically proven accurate SpO2 and pulse rate readings.</string>
+
+    <!-- Zencro models -->
+    <string name="zencro_x6">Bluetooth® Smart Bracelet</string>
+    <string name="zencro_x6_description">Bluetooth® Smart Bracelet is the premium multifunctional bluetooth activity and fitness tracking band.</string>
+
+    <!-- Accu-chek models -->
+    <string name="accu_check_ac">Accu-chek glucometer</string>
+    <string name="accu_check_ac_description">The Aviva Connect blood glucose monitoring system is intended to be used for the quantitative measurement of glucose in fresh capillary whole blood samples drawn from the fingertips.</string>
+
+    <!-- A&D firmware revision -->
+    <string name="blp008_d016">"BLP008_d016 "</string>
+    <string name="blp008_d017">"BLP008_d017 "</string>
+    <string name="cwsp008_108">"CWSP008_108 "</string>
+    <string name="cwsp008_110">"CWSP008_110 "</string>
+    <string name="htp008_134">HTP008_134</string>
+    <string name="wsp001_201">WSP001_201</string>
+
+    <!-- Dialog -->
+    <string name="dialog_nfc_permission_request_title">NFC is disabled</string>
+    <string name="dialog_ble_permission_request_title">Bluetooth is disabled</string>
+    <string name="dialog_nfc_permission_request_message">Enable NFC?</string>
+    <string name="dialog_ble_permission_request_message">Enable Bluetooth?</string>
+
+    <!-- Button -->
+    <string name="button_cancel">Cancel</string>
+    <string name="button_send">Send</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_settings">Settings</string>
+    <string name="add_device_step1">Press and hold on to the green "Power" button till a beep sound is heard.</string>
+    <string name="add_device_step2">Locate your phone\'s NFC and bring it near to the  bottom of the Medisave Fit Glucose Meter until a beep sound is heard.</string>
+    <string name="read_device_step1">Locate your measurement device near to your phone.</string>
+    <string name="read_device_step2">Turn your device on and start measurement as guided.</string>
+
+    <!-- Medication -->
+    <string name="OHGAS">OHGAS</string>
+    <string name="Actrapid">Actrapid</string>
+    <string name="Glargine">Glargine</string>
+    <string name="Glulisine">Glulisine</string>
+    <string name="Novorapid">Novorapid</string>
+    <string name="Insulatard">Insulatard</string>
+    <string name="Mixtard">Mixtard</string>
+    <string name="Novomix">Novomix</string>
+    <string name="Levemir">Levemir</string>
+    <string name="patient_list">Patient List</string>
+    <string name="search_patient_name">Search patient name</string>
+    <string name="add_device">Add Device</string>
+    <string name="hour">Hour</string>
+    <string name="day">Day</string>
+    <string name="uploading_data">Uploading Data...</string>
+    <string name="step">Steps</string>
+    <string name="save">Save</string>
+    <string name="systolic">systolic</string>
+    <string name="diastolic">diastolic</string>
+    <string name="show_preview">Show Preview</string>
+    <string name="hide_preview">Hide Preview</string>
+
+
+    <string name="jumper_fr302">Jumper JFD-FR302</string>
+    <string name="jumper_jpd500e">Jumper JPD500E</string>
+
+    <string name="jumper_fr302_desc">Integrated with SPO2 probe and processing display module.</string>
+    <string name="jumper_jpd500e_desc">nfrared technology specially designed to take the ear temperature of a person. Allows more quickly detect the body temperature by eardrum.</string>
+
+    <string name="jumper_fr302_instruction">Turn on your the device to start pairing.</string>
+    <string name="jumper_jpd500e_instruction">Turn on your the device to start pairing.</string>
+
+    <string name="urion_u80e">Urion U80E</string>
+    <string name="urion_u80e_desc">Urion Upper Arm Blood Pressure Monitor with Automatic Digital Blood Pressure Cuff.</string>
+    <string name="urion_u80e_instruction">Turn on your the device to start pairing.</string>
+
+    <string name="yolanda_lite">Yolanda Lite</string>
+    <string name="yolanda_lite_desc">Smart Scale with Body Fat,Wireless Bluetooth Precision Scale Digital Weight,Tracks BMI, BMR, Bone Mass, Fat Monitor Scale.</string>
+    <string name="yolanda_lite_instruction">Turn on your the device to start pairing.</string>
+
+    <string name="vivachek_ino_smart">VivaChek Ino Smart</string>
+    <string name="vivachek_ino_smart_desc">The VivaChek Ino blood glucose meter benefits from advanced technology with 8 electrodes per strip providing reliable results over a wide range of haematocrit, humidity and operating temperatures.</string>
+    <string name="vivachek_ino_smart_instruction">Turn on your the device to start pairing.</string>
+
+</resources>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <sg.lifecare.medicare.ui.view.CustomToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/ade_title"
+                    android:id="@+id/ade_title"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/top_blue_background"/>
+
+                <LinearLayout
+                    android:id="@+id/pairing_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bottom_white_background"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:id="@+id/auto_data_entry_image"
+                        android:background="@color/white"
+                        android:padding="20dp"
+                        android:src="@drawable/thermometer"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/thermo.info.pair_device" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/read_detail_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/bottom_white_background"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/reading_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Temperature"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/reading_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/reading_title"
+                        android:text="@string/display.unit.temperature.celsius"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/separator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#000000"
+                        android:layout_below="@id/reading_value"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/taken_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/separator"
+                        android:text="Taken on"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/taken_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/taken_title"
+                        android:text="-- , HH:mm am"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manual_title"
+                    android:id="@+id/manual_title"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/top_blue_background"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bottom_white_background"
+                    android:layout_below="@+id/manual_title"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/weight_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/temperature.info.temperature"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/white"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:weightSum="3">
+
+                        <EditText
+                            android:id="@+id/edit_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="2"
+                            android:inputType="numberDecimal"
+                            android:focusable="true"
+                            android:textSize="18sp"
+                            android:hint="@string/temperature.info.temperature"
+                            android:background="@drawable/edit_text_border"
+                            android:padding="8dp"
+                            android:layout_marginEnd="5dp"
+                            />
+
+                        <Spinner
+                            android:id="@+id/blood_glucose_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:background="@drawable/spinner_bg"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/date_time_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:text="Date &amp; Time"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edit_text_border"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="2"
+                            android:weightSum="3"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/rect_left_radius"
+                                android:padding="12dp"
+                                android:textSize="18sp"
+                                android:id="@+id/date_selection" />
+
+                            <ImageButton
+                                android:layout_width="43dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginTop="12dp"
+                                android:id="@+id/calendar_btn"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_cal_color"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edit_text_border"
+                            android:layout_weight="3"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:textSize="18sp"
+                                android:padding="12dp"
+                                android:background="@drawable/rect_left_radius"
+                                android:id="@+id/time_selection" />
+
+                            <ImageButton
+                                android:id="@+id/time_btn"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginBottom="11dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_clock_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                   <!-- <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Remarks"
+                        android:id="@+id/remarksTitle"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:hint="Remarks"
+                        android:padding="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/edit_text_border"
+                        android:id="@+id/blood_glucose_remarks" />-->
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

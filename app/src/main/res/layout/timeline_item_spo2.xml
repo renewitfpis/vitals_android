@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:minHeight="@dimen/timeline_min_height"
+    android:background="@drawable/ripple">
+
+    <ImageView
+        android:id="@+id/indicator_icon"
+        android:layout_width="@dimen/timeline_type_icon_size"
+        android:layout_height="@dimen/timeline_type_icon_size"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:src="@drawable/spo2"/>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_bp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/text_bp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="97%"
+                android:gravity="start"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black_lighter"
+                android:textSize="@dimen/font_headline"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/text_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pulse Rate"
+            android:textSize="@dimen/timeline_body_text_size"
+            android:gravity="center"
+            android:textColor="@color/black_54"
+            android:layout_below="@id/layout_bp_text"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="11:30"
+        android:textSize="@dimen/timeline_time_text_size"
+        android:gravity="center_horizontal|start"
+        android:minHeight="@dimen/timeline_min_height"
+        />
+
+
+</LinearLayout>

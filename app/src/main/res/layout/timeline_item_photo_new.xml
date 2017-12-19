@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:minHeight="@dimen/timeline_min_height"
+    android:background="@drawable/ripple">
+
+    <ImageView
+        android:id="@+id/indicator_icon"
+        android:layout_width="@dimen/timeline_type_icon_size"
+        android:layout_height="@dimen/timeline_type_icon_size"
+        android:gravity="center_vertical"
+        android:src="@drawable/food_intake"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="4">
+        <TextView
+            android:id="@+id/text_remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:gravity="start"
+            android:textSize="@dimen/timeline_body_text_size"
+            android:textColor="@color/black_lighter"
+            />
+        <ImageView
+            android:id="@+id/image_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="11:30"
+        android:textSize="@dimen/timeline_time_text_size"
+        android:gravity="center_horizontal|start"
+        />
+</LinearLayout>

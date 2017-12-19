@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <sg.lifecare.medicare.ui.view.CustomToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/entry_mode_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/auto_entry_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@drawable/custom_chart_time_tab">
+            <TextView
+                android:id="@+id/tvAutoEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Automatic Entry"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_subheading"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manual_entry_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:gravity="center"
+            android:background="@drawable/custom_chart_time_tab">
+            <TextView
+                android:id="@+id/tvManualEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Manual Entry"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_subheading"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryGreen"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/auto_entry_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/view_auto_entry"/>
+
+        <ViewStub
+            android:id="@+id/manual_entry_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

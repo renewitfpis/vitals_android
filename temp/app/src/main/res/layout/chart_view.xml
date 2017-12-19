@@ -1,0 +1,282 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_300"
+    >
+
+   <!-- <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >-->
+        <sg.lifecare.medicare.ui.view.CustomToolbar
+            android:id="@+id/chart_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+   <!-- </android.support.design.widget.AppBarLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background">
+
+        <LinearLayout
+            android:id="@+id/type_selector"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/graph.main_icons_height"
+            android:layout_marginTop="@dimen/graph.main_icons_margin_top"
+            android:layout_marginStart="@dimen/graph.main_icons_margin_left"
+            android:layout_marginEnd="@dimen/graph.main_icons_margin_right"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/glucose_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_blood_glucose"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/bp_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_blood_pressure_disabled"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/weight_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_weight_disabled"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+       <!-- <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+
+        <LinearLayout
+            android:id="@+id/timeSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type_selector"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/timeLeftBg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="@drawable/custom_chart_time_tab">
+                <TextView
+                    android:id="@+id/tvDaily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Daily"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_subheading"/>
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timeMiddleBg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp"
+                android:gravity="center"
+                android:background="@drawable/custom_chart_time_tab">
+                <TextView
+                    android:id="@+id/tvWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weekly"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_subheading"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timeRightBg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/custom_chart_time_tab">
+                <TextView
+                    android:id="@+id/tvMonthly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_subheading"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/dateSelector"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/date_selector_height"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/timeSelector"
+            layout="@layout/date_selector2_chart"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/dateSelector">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/chart_value_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_rect_shape_white_small"
+                >
+               <!-- <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">-->
+                    <ImageView
+                        android:id="@+id/chart_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:adjustViewBounds="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/blood_glucose"/>
+              <!--  </LinearLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/value_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/chart_value"
+                        android:text="4.6"
+                        android:textStyle="bold"
+                        android:textColor="@color/black_87"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/font_display_1"/>
+                    <TextView
+                        android:id="@+id/chart_unit"
+                        android:text="mm Hg"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/chart_value"
+                        android:layout_marginStart="5dp"
+                        android:layout_alignBaseline="@+id/chart_value"
+                        android:textSize="@dimen/font_body"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/chart_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/value_layout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:text="6:15 am"
+                    android:textSize="@dimen/font_body"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/chart_value_layout"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/chartCardView"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="0dp"
+                    card_view:cardCornerRadius="13dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    android:elevation="100dp"
+                    card_view:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/text_label_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Reading"/>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/chart"
+                            android:layout_weight="12"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_label_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/chart"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Time"
+                            />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/food_medic_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:minHeight="@dimen/measure_min_height"
+    android:background="@drawable/ripple"
+    >
+
+    <ImageView
+        android:id="@+id/indicator_icon"
+        android:layout_width="@dimen/timeline_type_icon_size"
+        android:layout_height="@dimen/timeline_type_icon_size"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/weight"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="10 KG"
+        android:textSize="@dimen/font_headline"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textColor="@color/black_54"
+        android:layout_toRightOf="@id/text_time"
+        />
+
+    <ImageView
+        android:id="@+id/image_navigate"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_weight="1"
+        android:src="@drawable/measurement_list_next"
+        android:adjustViewBounds="true"/>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/measure_actions_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left"
+        fab:fab_addButtonColorNormal="@color/colorPrimaryYellow"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryYellowDarker"
+        fab:fab_addButtonPlusIconColor="@android:color/white"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="7dp"
+        android:visibility="gone"
+        android:colorAccent="@android:color/white">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/ic_bloodglucose"
+            fab:fab_colorNormal="@android:color/white"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/ic_blood_pressure"
+            fab:fab_colorNormal="@android:color/white"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/ic_weight"
+            fab:fab_colorNormal="@android:color/white"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/ic_thermometer"
+            fab:fab_colorNormal="@android:color/white"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left"
+        fab:fab_addButtonColorNormal="@color/colorPrimaryGreen"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryGreenDarker"
+        fab:fab_addButtonPlusIconColor="@android:color/white"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="7dp"
+        android:colorAccent="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/measurement"
+            fab:fab_colorNormal="@android:color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Take Measurement"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_medication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/medicine"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Add Medication"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/note"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Add Notes"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            android:visibility="gone"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/food_intake"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Record Food"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_symptom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:colorAccent="@android:color/white"
+            android:visibility="gone"
+            fab:fab_size="normal"
+            fab:fab_icon="@drawable/symptom"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Record Symptom"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

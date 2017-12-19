@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="center_vertical"
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:id="@+id/button_left"
+        android:layout_width="@dimen/toolbar_icon_left_size"
+        android:layout_height="@dimen/toolbar_icon_left_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/toolbar_text_margin_left"/>
+
+    <Spinner
+        android:id="@+id/actionbar_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_title_font_size"
+        android:textStyle="bold"
+        android:background="@drawable/chart_spinner_bg"/>
+
+    <TextView
+        android:id="@+id/actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_title_font_size"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/drop_down_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_toEndOf="@id/actionbar_spinner"
+        android:layout_centerVertical="true"
+        android:src="@drawable/drop_down_arrow"/>
+
+    <ImageView
+        android:id="@+id/button_right"
+        android:layout_width="@dimen/toolbar_icon_right_size"
+        android:layout_height="@dimen/toolbar_icon_right_size"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/toolbar_text_margin_right"
+        android:src="@drawable/overflow_icon"
+        android:visibility="visible"/>
+
+    <Spinner
+        android:id="@+id/spinner_right"
+        android:layout_width="@dimen/toolbar_icon_right_size"
+        android:layout_height="@dimen/toolbar_icon_right_size"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/toolbar_text_margin_right"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/button_second_right"
+        android:layout_width="@dimen/toolbar_icon_size"
+        android:layout_height="@dimen/toolbar_icon_size"
+        android:layout_toLeftOf="@id/button_right"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/toolbar_text_margin_right"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_dimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_semi_transparent"
+        android:visibility="gone"
+        />
+</RelativeLayout>

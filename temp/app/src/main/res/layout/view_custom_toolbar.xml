@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="center_vertical"
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:id="@+id/button_left"
+        android:layout_width="@dimen/toolbar_icon_left_size"
+        android:layout_height="@dimen/toolbar_icon_left_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/toolbar_text_margin_left"/>
+
+    <TextView
+        android:id="@+id/actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_title_font_size"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/button_right"
+        android:layout_width="@dimen/toolbar_icon_right_size"
+        android:layout_height="@dimen/toolbar_icon_right_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/toolbar_text_margin_right"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/button_second_right"
+        android:layout_width="@dimen/toolbar_icon_right_size"
+        android:layout_height="@dimen/toolbar_icon_right_size"
+        android:layout_toStartOf="@id/button_right"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/toolbar_text_margin_right"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_dimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_semi_transparent"
+        android:visibility="gone"
+        />
+</RelativeLayout>

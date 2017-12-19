@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <sg.lifecare.medicare.ui.view.CustomToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/reading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/device_desc_view"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginEnd="10dp"
+            layout="@layout/device_list_row"/>
+
+        <RelativeLayout
+            android:id="@+id/read_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="15dp"
+            android:layout_below="@id/device_desc_view"
+            android:background="#efefef">
+            <TextView
+                android:id="@+id/reading_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:text="Blood Pressure Level"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/reading_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/reading_title"
+                android:text="--"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@id/reading_value"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/separator"
+                android:text="Taken on"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/taken_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/date_title"
+                android:text="--"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="Finish"
+            android:layout_below="@id/read_detail_view"/>
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="Cancel"
+            android:layout_below="@id/finish_button"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/preparation_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/app_bar"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/step1_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/no1_icon"/>
+
+        <TextView
+            android:id="@+id/preparation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/step1_icon"
+            android:text="Preparation"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/preparation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/step1_icon"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/preparation_title"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/prep_pict"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/preparation_text"
+            android:layout_toRightOf="@id/step1_icon"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/prep_wash_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/step1_icon"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/prep_pict"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:text="PREP"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/wash_pict"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/prep_wash_text"
+            android:layout_toRightOf="@id/step1_icon"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55ffffff"
+        android:layout_below="@id/app_bar"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="sg.lifecare.medicare.ui.DashboardActivity"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <sg.lifecare.medicare.ui.view.CustomToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/color_gray"
+        >
+        <!--
+        <FrameLayout
+            android:id="@+id/fragment_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            />
+            -->
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+
+            <LinearLayout
+                android:id="@+id/overview_activity_nav_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/nav_bar_overview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:background="@drawable/dashboard_nav_bar_selector"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dashboard_nav_bar_padding"
+                    android:paddingBottom="@dimen/dashboard_nav_bar_padding"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/image_overview"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/selector_tint_menu_overview"
+                        android:adjustViewBounds="true"/>
+                    <TextView
+                        android:id="@+id/text_overview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/navigation_overview"
+                        android:textColor="@color/dashboard_nav_bar_text_selector"
+                        android:textSize="@dimen/font_dashboard_nav_bar_title"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_bar_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dashboard_nav_bar_padding"
+                    android:paddingBottom="@dimen/dashboard_nav_bar_padding"
+                    android:clickable="true"
+                    android:background="@drawable/dashboard_nav_bar_selector"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/image_activity"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/selector_tint_menu_activity"
+                        android:adjustViewBounds="true"
+                        />
+                    <TextView
+                        android:id="@+id/text_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/navigation_activity"
+                        android:textColor="@color/dashboard_nav_bar_text_selector"
+                        android:textSize="@dimen/font_dashboard_nav_bar_title"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/dim_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_semi_transparent"
+                android:visibility="invisible"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+
+            <include
+                layout="@layout/dashboard_fabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/overview_activity_nav_bar"/>
+
+        </RelativeLayout>
+
+
+        <!--
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"-->
+    </LinearLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

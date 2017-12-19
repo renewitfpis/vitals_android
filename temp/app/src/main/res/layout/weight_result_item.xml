@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:layout_margin="5dp"
+              android:layout_gravity="center_vertical"
+              android:paddingTop="10dp"
+              android:paddingBottom="10dp"
+              android:orientation="horizontal"
+              android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/check_box_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_weight="1.5">
+        <ImageView
+            android:id="@+id/check_box"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/select"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/glucose_display"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120/90"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_title"/>
+        <TextView
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/display.unit.blood_pressure.si"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_glucose_list"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/date_display"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20/9/2016"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_glucose_list"/>
+
+        <TextView
+            android:id="@+id/measured_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="08:20"
+            android:textSize="@dimen/font_glucose_list"/>
+    </LinearLayout>
+
+
+</LinearLayout>

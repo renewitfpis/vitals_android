@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02BBC0</color>
+    <color name="colorPrimaryDark">#006D72</color>
+    <color name="colorAccent">#FFD23A</color>
+
+    <color name="colorPrimaryTransparent">#642202bb</color>
+    <color name="colorPrimaryGreen">#02BBC0</color>
+    <color name="colorPrimaryGreen2">#67d5d5</color>
+    <color name="colorPrimaryGreenDarker">#05969b</color>
+    <color name="colorPrimaryGreenLight">#d2f0f0</color>
+    <color name="colorPrimaryRed">#FF9376</color>
+    <color name="colorPrimaryYellow">#FFD23A</color>
+    <color name="colorPrimaryYellowDarker">#eabe2a</color>
+
+    <color name="reminderRed">#CC882C3C</color>
+    <color name="reminderGreen">#CC3f741f</color>
+    <color name="reminderBlue">#CC1d4a84</color>
+    
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color><!--
+    <color name="dim_background">#80808050</color>-->
+
+    <color name="progress_bar">@color/colorPrimary</color>
+    <color name="black_semi_transparent">#b2666666</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+
+    <color name="black_lighter">#414141</color>
+    <color name="black_87">#de000000</color>
+    <color name="black_54">#8a000000</color>
+    <color name="black_38">#61000000</color>
+    <color name="black_12">#1f000000</color>
+
+    <color name="color_orange">#FFC21A</color>
+    <color name="color_orange_dark">#F99545</color>
+    <color name="color_red">#e14563</color>
+    <color name="color_gray">#F4F4F4</color>
+    <color name="color_green_weight">#74b465</color>
+    <color name="dk_grey">#616161</color>
+    <color name="light_grey">#EEEEEE</color>
+
+    <!-- squarecamera -->
+    <color name="squarecamera__red">#F0001D</color>
+    <color name="squarecamera__pressed_red">#B3F0001D</color>
+    <color name="squarecamera__white">#FFFFFF</color>
+    <color name="squarecamera__pressed_white">#99FFFFFF</color>
+    <color name="squarecamera__cover">#FFFFFF</color>
+
+    <!-- objects -->
+    <color name="dialog_background">#00000000</color>
+    <color name="colorDeactivatedDay">#808080</color>
+
+    <!-- heads up -->
+    <color name="gray">#808080</color>
+    <color name="light_gray">#b5b5b5</color>
+    <color name="greyed_out">#d7d7d7</color>
+    <color name="shadow_gray">#cfcfcf</color>
+    <color name="md_grey_300">#e0e0e0</color>
+    <color name="transparency">#00000000</color>
+    <color name="marker_view_white">#fffef8</color>
+
+    <!-- terumo overview pie chart -->
+    <color name="pie_chart_pink">#EA285F</color>
+    <color name="pie_chart_green">#19DB95</color>
+    <color name="pie_chart_yellow">#FFD23A</color>
+    <color name="overview_glucose">#F06758</color>
+    <color name="overview_pressure">@color/colorPrimaryYellow</color>
+    <color name="overview_weight">#90C850</color>
+    <color name="overview_temperature">#407AE2</color>
+    <color name="overview_spo2">#60b6fa</color>
+    <color name="overview_steps">@color/color_orange_dark</color>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        layout="@layout/custom_toolbar"/>
+
+    <ListView
+        android:id="@+id/reminder_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/empty_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_reminders_360"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/text_no_reminder_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No reminder"
+            android:textSize="@dimen/font_title"
+            android:textColor="@color/black_54"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/text_no_reminder_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Always be on schedule\nby setting up reminders for an activity"
+            android:textSize="@dimen/font_body"
+            android:textColor="@color/black_54"/>
+    </LinearLayout>
+
+</LinearLayout>

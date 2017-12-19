@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center">
+
+        <sg.lifecare.medicare.ui.view.PairingIndicatorView
+            android:id="@+id/pairing_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/pairing_indicator_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pairing_indicator"
+            android:textSize="@dimen/font_headline"
+            android:textColor="@color/color_orange_dark"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            android:text="Pairing Success"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom">
+        <TextView
+            android:id="@+id/device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:text="Name your Device"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/device_name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="e.g. Dad's BP Monitor"
+            android:layout_below="@id/device_title"
+            android:background="@drawable/round_rect_shape_white_stroke"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:text="Medisafe Fit"
+            android:textColor="@color/black"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/device_name_field"
+            android:text="Finish"
+            style="@style/green_button"/>
+
+        <Button
+            android:id="@+id/try_again_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/device_name_field"
+            android:text="Try Again"
+            style="@style/green_button"/>
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/finish_button"
+            android:text="Cancel"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/measure"
+        android:title="Measure"></item>
+
+    <item
+        android:id="@+id/export_data"
+        android:title="Export Data"></item>
+
+   <!-- <item
+        android:id="@+id/hide"
+        android:title="Hide" />
+
+    <item
+        android:id="@+id/unpair"
+        android:title="Unpair"></item>-->
+
+</menu>

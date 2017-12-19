@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:layout_margin="5dp"
+              android:paddingTop="10dp"
+              android:paddingBottom="10dp"
+              android:layout_gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/glucose_display"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/glucose_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="100"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_glucose_list"/>
+        <TextView
+            android:id="@+id/glucose_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/display.unit.mmol_per_l"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_glucose_list"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/date_display"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+
+        android:layout_weight="4"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reminder Date"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_glucose_list"/>
+
+        <TextView
+            android:id="@+id/measured_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Before meal"
+            android:textSize="@dimen/font_glucose_list"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/deleteBtnLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/normal_cross_color"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:minHeight="@dimen/timeline_min_height">
+
+    <ImageView
+        android:id="@+id/ivReminder"
+        android:layout_width="@dimen/timeline_type_icon_size"
+        android:layout_height="@dimen/timeline_type_icon_size"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/icon_reminder"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tvReminderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="110 mg/dL"
+            android:textSize="@dimen/timeline_body_text_size"
+            android:textColor="@color/black_lighter"
+            />
+
+        <TextView
+            android:id="@+id/tvReminderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 unit"
+            android:textSize="@dimen/timeline_body_text_size"
+            android:textColor="@color/black_54"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:src="@drawable/delete_button"
+        />
+</LinearLayout>

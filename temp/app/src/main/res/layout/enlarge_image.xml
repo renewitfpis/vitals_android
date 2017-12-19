@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_cross_white"
+        android:id="@+id/cross_icon" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cross_icon"
+        android:layout_gravity="center"
+        android:layout_marginLeft="3dp"
+        android:id="@+id/image_view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_view"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:text="Remarks"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:id="@+id/text_remark" />
+</RelativeLayout>
