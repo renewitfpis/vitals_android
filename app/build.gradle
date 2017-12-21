@@ -10,7 +10,7 @@ android {
     def VERSION_CODE = 20
     def VERSION_NAME = "1.1.2"
     compileSdkVersion 27
-    buildToolsVersion "27.0.1"
+    buildToolsVersion "27.0.2"
     defaultConfig {
         applicationId "sg.lifecare.medicare"
         minSdkVersion 19
@@ -47,11 +47,19 @@ android {
     productFlavors {
         general {
             buildConfigField("int", "PRODUCT_FLAVOR", "0")
+            buildConfigField("String", "SERVER_URL", "\"http://wwww.lifecare.sg/\"")
         }
         medisafe {
             applicationId 'sg.lifecare.medisafe'
             versionNameSuffix 'medisafe'
             buildConfigField("int", "PRODUCT_FLAVOR", "1")
+            buildConfigField("String", "SERVER_URL", "\"http://wwww.lifecare.sg/\"")
+        }
+        hansap {
+            applicationId 'sg.lifecare.medisafe'
+            versionNameSuffix 'medisafe'
+            buildConfigField("int", "PRODUCT_FLAVOR", "1")
+            buildConfigField("String", "SERVER_URL", "\"http://vitals.hansap.com/\"")
         }
     }
     sourceSets {
@@ -66,11 +74,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:support-v4:27.0.1'
-    compile 'com.android.support:appcompat-v7:27.0.1'
-    compile 'com.android.support:cardview-v7:27.0.1'
-    compile 'com.android.support:recyclerview-v7:27.0.1'
-    compile 'com.android.support:design:27.0.1'
+    compile 'com.android.support:support-v4:27.0.2'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:cardview-v7:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile 'com.android.support:design:27.0.2'
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
     compile 'com.balysv:material-ripple:1.0.2'
@@ -85,7 +93,7 @@ dependencies {
     compile files('libs/qn-ble-api-3.9.jar')
     //compile files('gcm.jar')
     compile 'com.code-troopers.betterpickers:library:3.0.0'
-    compile 'com.google.android.gms:play-services-gcm:11.6.0'
+    compile 'com.google.android.gms:play-services-gcm:11.6.2'
     compile 'com.koushikdutta.ion:ion:2.+'
     compile 'com.getbase:floatingactionbutton:1.9.1'
 }
