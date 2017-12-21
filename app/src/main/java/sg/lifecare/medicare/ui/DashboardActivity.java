@@ -1487,7 +1487,7 @@ public class DashboardActivity extends AppCompatActivity implements
                 temp.setUnit(unit.contains("C") ? 0 : 1);
                 temp.setDate(date);
                 temp.setEntityId(entityId);
-                temp.setEntityId(eventId);
+                temp.setEventId(eventId);
                 PatientData.getInstance().addTemperature(realm,temp);
             }
         }
