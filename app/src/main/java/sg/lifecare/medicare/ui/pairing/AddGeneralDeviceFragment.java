@@ -239,7 +239,7 @@ public class AddGeneralDeviceFragment extends AddDeviceFragment {
         }
 
         if (mJumperOximeter != null) {
-            mJumperOximeter.startScanning();
+            mJumperOximeter.stopScanning();
         }
 
         if (mUrionBloodPressureMeter != null) {
