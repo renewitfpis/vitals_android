@@ -313,9 +313,13 @@ public class SpO2ReadingActivity extends AppCompatActivity {
                             startEndBtn.setImageResource(R.drawable.start);
                             stopDetect();
                             //TODO: upload data
-                            for(int i = 0; i<spo2List.size(); i++){
+                            /*for(int i = 0; i<spo2List.size(); i++){
                                 PatientData.getInstance().addSpO2(mRealm,spo2List.get(i));
                                 Timber.d("Copying data " + i + " to realm");
+                            }*/
+
+                            if (spo2List.size() > 0) {
+                                PatientData.getInstance().addSpO2(mRealm,spo2List.get(spo2List.size()-1));
                             }
 
                             Timber.d("Done Copying data");
@@ -405,10 +409,12 @@ public class SpO2ReadingActivity extends AppCompatActivity {
         tvDescription.setText("Press start to calculate your SpO2");
         startEndBtn.setImageResource(R.drawable.start);
         stopDetect();
-        //TODO: upload data
-        for(int i = 0; i<spo2List.size(); i++){
-            PatientData.getInstance().addSpO2(mRealm,spo2List.get(i));
-            Timber.d("Copying data " + i + " to realm");
+//        for(int i = 0; i<spo2List.size(); i++){
+//            PatientData.getInstance().addSpO2(mRealm,spo2List.get(i));
+//            Timber.d("Copying data " + i + " to realm");
+//        }
+        if (spo2List.size() > 0) {
+            PatientData.getInstance().addSpO2(mRealm,spo2List.get(spo2List.size()-1));
         }
 
         Timber.d("Done Copying data");
@@ -423,7 +429,6 @@ public class SpO2ReadingActivity extends AppCompatActivity {
         Timber.d("spo2set data END DATE: " + spo2List.get(spo2List.size()-1).getDate());
         Timber.d("spo2set data SIZE: " + spo2List.size());
 
-        //TODO: upload to server
         new uploadSpO2DataToServer(spo2List.get(spo2List.size()-1)).execute();
     }
 
