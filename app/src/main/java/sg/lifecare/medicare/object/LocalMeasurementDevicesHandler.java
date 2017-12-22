@@ -146,13 +146,14 @@ public class LocalMeasurementDevicesHandler {
 
             if(!md.getMode().equalsIgnoreCase(MedicalDevice.WCONFIG_CODE_NFC)) {
 
-                if(md.getModel()!= Model.BERRY_BM1000B
-                        && md.getModel()!=Model.NONIN_3230
-                        && md.getModel()!= Model.ZENCRO_X6
+                if(md.getModel() != Model.BERRY_BM1000B
+                        && md.getModel() != Model.NONIN_3230
+                        && md.getModel() != Model.ZENCRO_X6
                         && md.getModel() != Model.JUMPER_FR302
                         && md.getModel() != Model.JUMPER_JPD500E
                         && md.getModel() != Model.YOLANDA_LITE
-                        && md.getModel() != Model.VIVACHEK_INO_SMART) {
+                        && md.getModel() != Model.VIVACHEK_INO_SMART
+                        && md.getModel() != Model.URION_BP_U80E) {
 
                     boolean isConnected = false;
                     for (BluetoothDevice bt : pairedDevices) {
