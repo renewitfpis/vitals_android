@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
@@ -312,7 +313,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                         isHealthy = false;
                     }
                 }
-                String valueStr = String.valueOf(glucoseLevel);
+                String valueStr = String.format(Locale.getDefault(), "%.1f", glucoseLevel);
                 String unitStr = mContext.getResources().getString(R.string.display_unit_mmol_per_l);//terumo.getStringUnit();
                 String displayStr = valueStr + " " + unitStr;
 

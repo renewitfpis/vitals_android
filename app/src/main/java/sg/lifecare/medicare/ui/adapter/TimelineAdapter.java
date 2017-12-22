@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
@@ -377,7 +378,7 @@ public class TimelineAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                         isHealthy = false;
                     }
                 }
-                String valueStr = String.valueOf(glucoseLevel);
+                String valueStr = String.format(Locale.getDefault(), "%.1f", glucoseLevel);
                 String unitStr = terumo.getStringUnit();
                 String displayStr = valueStr + " " + unitStr;
 
