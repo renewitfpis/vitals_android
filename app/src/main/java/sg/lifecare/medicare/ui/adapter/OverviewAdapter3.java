@@ -25,6 +25,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import io.realm.Realm;
 import sg.lifecare.medicare.R;
@@ -433,8 +434,7 @@ public class OverviewAdapter3 extends RecyclerView.Adapter<RecyclerView.ViewHold
                         isHealthy = false;
                     }
                 }
-                String valueStr = String.valueOf(glucoseLevel) + " ";
-                valueStr = valueStr.replace(".0 ", "").replace(" ","");
+                String valueStr = String.format(Locale.getDefault(),"%.1f", glucoseLevel);
                 String unitStr = terumo.getStringUnit();
 
                 ((VitalsItemView)holder).valueText.setText(valueStr);
