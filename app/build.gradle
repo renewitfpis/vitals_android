@@ -86,8 +86,8 @@ dependencies {
     compile files('libs/qn-ble-api-3.9.jar')
     //compile files('gcm.jar')
     compile 'com.code-troopers.betterpickers:library:3.0.0'
-    compile 'com.google.android.gms:play-services-gcm:11.6.2'
-    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.google.android.gms:play-services-gcm:11.8.0'
+    compile 'com.koushikdutta.ion:ion:2.2.1'
     compile 'com.getbase:floatingactionbutton:1.9.1'
 }
 
