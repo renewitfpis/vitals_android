@@ -57,7 +57,7 @@ public class WeightReadingAdapter extends ArrayAdapter<Weight> implements ListAd
 
         tvDate.setText(dateFormat.format(weight.getDate()));
         tvMeasuredTime.setText(timeFormat.format(weight.getDate()));
-        tvReading.setText(String.format(Locale.getDefault(), "%.1f", weight.getWeight()));
+        tvReading.setText(String.format(Locale.getDefault(), "%.2f", weight.getWeight()));
         tvUnit.setText(weight.getStringUnit());
         if(selected[position]){
             checkBox.setImageResource(R.drawable.select);

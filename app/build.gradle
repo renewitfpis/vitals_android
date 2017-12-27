@@ -8,7 +8,7 @@ apply plugin: 'realm-android'
 
 android {
     def VERSION_CODE = 23
-    def VERSION_NAME = "1.1.3f"
+    def VERSION_NAME = "1.1.3g"
 
     compileSdkVersion 27
     buildToolsVersion "27.0.2"
@@ -84,7 +84,6 @@ dependencies {
     compile files('libs/NfcHealthcareLibrary-core-20151016.jar')
     compile files('libs/NfcHealthcareLibrary-terumo-lib-20141204.jar')
     compile files('libs/qn-ble-api-3.9.jar')
-    //compile files('gcm.jar')
     compile 'com.code-troopers.betterpickers:library:3.0.0'
     compile 'com.google.android.gms:play-services-gcm:11.8.0'
     compile 'com.koushikdutta.ion:ion:2.2.1'
