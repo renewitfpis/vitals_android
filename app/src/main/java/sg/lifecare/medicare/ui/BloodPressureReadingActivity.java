@@ -982,6 +982,8 @@ public class BloodPressureReadingActivity extends AppCompatActivity implements C
             mUrionBloodPressure.setDate(Calendar.getInstance().getTime());
             mUrionBloodPressure.setUnit(BloodPressureMeasurementProfile.UNIT_SI);
             mUrionBloodPressure.setEntityId(entityId);
+
+            mUrionBloodPressureMeter.disconnect();
         }
 
         @Override
