@@ -7,8 +7,9 @@ repositories {
 apply plugin: 'realm-android'
 
 android {
-    def VERSION_CODE = 21
-    def VERSION_NAME = "1.1.3"
+    def VERSION_CODE = 23
+    def VERSION_NAME = "1.1.3f"
+
     compileSdkVersion 27
     buildToolsVersion "27.0.2"
     defaultConfig {
@@ -19,46 +20,38 @@ android {
         versionName VERSION_NAME
     }
     buildTypes {
-
         debug {
-            debuggable true
-            applicationIdSuffix ".debug"
-            applicationVariants.all { variant ->
-                variant.outputs.all { output ->
-                    output.outputFileName = new File(output.outputFile.parent, "vitals-" + versionName + "_debug.apk")
-                }
-            }
+            applicationIdSuffix '.debug'
+            versionNameSuffix '_debug'
         }
-
-        release {
-            debuggable false
-            minifyEnabled false
-            zipAlignEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            applicationVariants.all { variant ->
-                variant.outputs.all { output ->
-                    outputFileName = "vitals-" + versionName + "_release.apk"
-                }
-            }
+    }
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == 'debug') {
+            variant.mergedFlavor.versionName = android.defaultConfig.versionName
         }
-
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "Vitals-" + variant.versionName + ".apk"
+        }
     }
     flavorDimensions "default"
     productFlavors {
         general {
+            versionNameSuffix '_general_lifecare'
             buildConfigField("int", "PRODUCT_FLAVOR", "0")
             buildConfigField("String", "SERVER_URL", "\"https://www.lifecare.sg/\"")
         }
         medisafe {
             applicationId 'sg.lifecare.medisafe'
-            versionNameSuffix 'medisafe'
+            versionNameSuffix '_medisafe_lifecare'
             buildConfigField("int", "PRODUCT_FLAVOR", "1")
             buildConfigField("String", "SERVER_URL", "\"https://www.lifecare.sg/\"")
         }
         hansap {
-            applicationId 'sg.lifecare.medisafe'
-            versionNameSuffix 'medisafe'
-            buildConfigField("int", "PRODUCT_FLAVOR", "1")
+            applicationIdSuffix '.hansap'
+            versionNameSuffix '_general_hansap'
+            buildConfigField("int", "PRODUCT_FLAVOR", "0")
             buildConfigField("String", "SERVER_URL", "\"http://vitals.hansap.com/\"")
         }
     }
