@@ -35,6 +35,13 @@ public class YolandaWeightMeter implements QNBleCallback, QNBleScanCallback {
     }
 
     public void startScanning() {
+        Timber.d("startScanning");
+
+        if (mQNBleApi.isScanning()) {
+            Timber.d("device is scanning");
+            return;
+        }
+
         mQNBleApi.setScanMode(QNBleApi.SCAN_MODE_FIRST);
         mQNBleApi.startLeScan(null, null, this);
     }
@@ -58,26 +65,26 @@ public class YolandaWeightMeter implements QNBleCallback, QNBleScanCallback {
         } catch (ParseException e) {
             Timber.e(e);
         }
-
-
     }
 
     public void disconnect() {
+        Timber.d("disconnect");
         mQNBleApi.disconnectAll();
     }
 
     @Override
     public void onConnectStart(QNBleDevice qnBleDevice) {
-
+        Timber.d("onConnectStart");
     }
 
     @Override
     public void onConnected(QNBleDevice qnBleDevice) {
-
+        Timber.d("onConnected");
     }
 
     @Override
     public void onDisconnected(QNBleDevice qnBleDevice, int i) {
+        Timber.d("onDisconnected: %d", i);
 
         mListener.onConnectionStateChanged(BluetoothAdapter.STATE_DISCONNECTED);
 
@@ -85,11 +92,13 @@ public class YolandaWeightMeter implements QNBleCallback, QNBleScanCallback {
 
     @Override
     public void onUnsteadyWeight(QNBleDevice qnBleDevice, float v) {
-
+        Timber.d("onUnsteadyWeight");
     }
 
     @Override
     public void onReceivedData(QNBleDevice qnBleDevice, QNData qnData) {
+        Timber.d("onReceivedData");
+
         List<QNItemData> items = qnData.getAll();
 
         for (QNItemData item : items) {
@@ -98,21 +107,25 @@ public class YolandaWeightMeter implements QNBleCallback, QNBleScanCallback {
         }
 
         mListener.onReadResult(qnData.getWeight());
+
+        // we not interested on calculated value
+        mQNBleApi.disconnectAll();
+        mListener.onConnectionStateChanged(BluetoothAdapter.STATE_DISCONNECTED);
     }
 
     @Override
     public void onReceivedStoreData(QNBleDevice qnBleDevice, List<QNData> list) {
-
+        Timber.d("onReceivedStoreData");
     }
 
     @Override
     public void onDeviceModelUpdate(QNBleDevice qnBleDevice) {
-
+        Timber.d("onDeviceModelUpdate");
     }
 
     @Override
     public void onLowPower() {
-
+        Timber.d("onLowPower");
     }
 
     @Override
@@ -122,6 +135,7 @@ public class YolandaWeightMeter implements QNBleCallback, QNBleScanCallback {
 
     @Override
     public void onScan(QNBleDevice qnBleDevice) {
+        Timber.d("onScan");
         stopScanning();
         mListener.onDeviceScan(qnBleDevice);
     }
