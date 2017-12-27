@@ -1,8 +1,0 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-
-    <style name="dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="colorAccent">@color/colorPrimary</item>
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
-
-</resources>
